@@ -15,13 +15,12 @@ int main(void)
 	{
 		if (i % 11 == 0 && i != 0)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(',''\n');
+			putchar(' ''\n');
 		}
-		putchar(i / 10 + 48);
-		putchar(i % 10 + 48);
+		putchar(i / 10 + 48'\n');
+		putchar(i % 10 + 48'\n');
 		i++;
 	}
-	putchar('\n');
 	return (0);
 }
