@@ -9,23 +9,18 @@
  */
 int main(void)
 {
-	int i;
-	int j;
+	int i = 0;
 
-	for (i = 0; i <= 9; i++)
+	while (i <= 90)
 	{
-		for (j = 0; i <= 9; j++)
+		if (i % 11 == 0 && i != 0)
 		{
-			putchar(i + '0');
 			putchar(',');
 			putchar(' ');
-			putchar(j + '0');
-			if (i != 9 || j != 9)
-			{
-				putchar(',');
-				putchar(' ');
-			}
 		}
+		putchar(i / 10 + 48);
+		putchar(i % 10 + 48);
+		i++;
 	}
 	putchar('\n');
 	return (0);
