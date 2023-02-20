@@ -15,11 +15,11 @@ int main(void)
 	{
 		if (i % 11 == 0 && i != 0)
 		{
-			putchar(','');
-			putchar(' '');
+			putchar(',');
+			putchar(' ');
 		}
-		putchar(i / 10 + 48');
-		putchar(i % 10 + 48');
+		putchar(i / 10 + 48);
+		putchar(i % 10 + 48);
 		i++;
 	}
 	return (0);
