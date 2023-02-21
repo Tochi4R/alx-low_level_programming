@@ -5,12 +5,12 @@
 
 void print_alphabet(void)
 {
-	char lowercase = 'a'
+	char letter = 'a'
 
-	while (lowercase <= 'z')
+	for (letter <= 'z')
 	{
-		_putchar(lowercase);
-		lowercase++;
+		putchar(letter);
+		letter++;
 	}
-	_putchar('\n');
+	putchar('\n');
 }
