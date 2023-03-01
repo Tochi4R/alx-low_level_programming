@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * _strcat - A function that appends two strings
  *
@@ -27,6 +26,6 @@ char *_strcat(char *dest, char *src)
 		i++;
 		j++;
 	}
-	dest[i] != '\0';
+	dest[i] = '\0';
 	return (dest);
 }
