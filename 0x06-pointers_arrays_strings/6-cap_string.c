@@ -1,4 +1,6 @@
 #include "main.h"
+#include <ctype.h>
+#include <stdio.h>
 /**
  * cap_string - A function that capitalize all words of a string
  *
@@ -6,33 +8,21 @@
  *
  * Return: s
  */
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	int index = 0;
+	int i;
 
-	while (str[index])
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
-
-		if (str[index - 1] == ' ' ||
-		    str[index - 1] == '\t' ||
-		    str[index - 1] == '\n' ||
-		    str[index - 1] == ',' ||
-		    str[index - 1] == ';' ||
-		    str[index - 1] == '.' ||
-		    str[index - 1] == '!' ||
-		    str[index - 1] == '?' ||
-		    str[index - 1] == '"' ||
-		    str[index - 1] == '(' ||
-		    str[index - 1] == ')' ||
-		    str[index - 1] == '{' ||
-		    str[index - 1] == '}' ||
-		    index == 0)
-			str[index] -= 32;
-
-		index++;
+		if (i == 0 || isspace(s[i - 1]) ||
+				s[i - 1] == ',' || s[i - 1] == ';' ||
+				s[i - 1] == '.' || s[i - 1] == '!' ||
+				s[i - 1] == '?' || s[i - 1] == '"' ||
+				s[i - 1] == '(' || s[i - 1] == ')' ||
+				s[i - 1] == '{' || s[i - 1] == '}')
+		{
+			s[i] = toupper(s[i]);
+		}
 	}
-
-	return (str);
+	return (s);
 }
