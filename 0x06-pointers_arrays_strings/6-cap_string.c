@@ -6,7 +6,7 @@
  *
  * Return: s
  */
-char *cap_string(char *s)
+char *cap_string(char *str)
 {
 	int index = 0;
 
