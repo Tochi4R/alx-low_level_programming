@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strchr - A funtion that gets the lenght of a prefix substring
  *
