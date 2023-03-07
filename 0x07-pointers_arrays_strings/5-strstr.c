@@ -5,31 +5,26 @@
  *
  * @haystack: input
  *
- * @needles: input
+ * @needle: input
  *
  * Return: NULL
  */
 char *_strstr(char *haystack, char *needle)
 {
-	if (*needle == '\0')
+	for (; *haystack != '\0'; haystack++)
 	{
-		return (haystack);
-	}
-	while (*haystack != '\0')
-	{
-		char *p1 = haystack;
-		char *p2 = needle;
+		char *l = haystack;
+		char *p = needle;
 
-		while (*p1 != '\0' && *p2 != '\0' && *p1 == *p2)
+		while (*l == *p && *p != '\0')
 		{
-			p1++;
-			p2++;
+			l++;
+			p++;
 		}
-		if (*p2 == '\0')
-		{
+
+		if (*p == '\0')
 			return (haystack);
-		}
-		haystack++;
 	}
-	return (NULL);
+
+	return (0);
 }
