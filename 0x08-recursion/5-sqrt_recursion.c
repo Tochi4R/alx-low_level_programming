@@ -19,16 +19,14 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		int i = 1;
+		int root = _sqrt_recursion(n / 4) * 2;
 
-		while (i * i <= n)
+		if ((root + 1) * (root + 1) <= n && (root + 1) > root)
 		{
-			i++;
+			return (root + 1);
 		}
-		i--;
-		if (i * i == n)
-		{
-			return (i);
+		else if (root * root <= n && root > 0)
+		{return (root);
 		}
 		else
 		{
