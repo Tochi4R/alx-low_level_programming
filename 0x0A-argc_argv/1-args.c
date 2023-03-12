@@ -2,13 +2,17 @@
 #include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c:Ther character to print
+ * main - print the number of arguments passed to the program
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
- * Return: On success 1.
- * On error, -1 is returned and errno is set appropriately.
+ * Return: Always 0 (Success)
  */
-int _putchar(char c)
+
+int main(int argc, char *argv[])
 {
-return (write(1, &c, 1));
+(void) argv; /*Ignore argv*/
+	printf("%d\n", argc - 1);
+
+	return (0);
 }
