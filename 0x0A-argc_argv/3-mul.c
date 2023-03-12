@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * main - Entry point for the program
  *
@@ -15,13 +14,11 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1;
-	int num2;
-	int result;
+	int result, num1, num2;
 
-	if (argc != 3)
+	if (argc < 3 || argc > 3)
 	{
-		fprintf(stderr, "Error\n");
+		printf("Error\n");
 		return (1);
 	}
 
@@ -30,5 +27,6 @@ int main(int argc, char *argv[])
 	result = num1 * num2;
 
 	printf("%d\n", result);
+
 	return (0);
 }
